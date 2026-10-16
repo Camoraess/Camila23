@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Varsity collegiate typography matching "CAMILA 23" */
+  .font-varsity {
+    font-family: 'Graduate', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    -webkit-text-stroke: 4.5px #540d25;
+    paint-order: stroke fill;
+    text-shadow: 
+      0 4px 0 #540d25,
+      0 6px 0 #320614,
+      0 10px 20px rgba(84, 13, 37, 0.4);
+  }
+
+  .font-varsity-sm {
+    font-family: 'Graduate', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    -webkit-text-stroke: 3px #540d25;
+    paint-order: stroke fill;
+    text-shadow: 
+      0 2px 0 #540d25,
+      0 4px 8px rgba(84, 13, 37, 0.35);
+  }
+
+  /* 8-bit Pixel Font for retro hearts and badges */
+  .font-pixel {
+    font-family: 'Press Start 2P', monospace;
+  }
+
+  /* Y2K Jelly Glossy Heart with 3D Chrome Bevel */
+  .jelly-heart-box {
+    filter: drop-shadow(0 15px 35px rgba(220, 20, 90, 0.45)) drop-shadow(0 4px 10px rgba(180, 0, 70, 0.3));
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .jelly-heart-box:hover {
+    transform: scale(1.03);
+  }
+
+  /* Glitter pill badge for Location */
+  .glitter-badge {
+    background: radial-gradient(circle at 50% 20%, #ff5fa0 0%, #e60067 45%, #9e0042 100%);
+    box-shadow: 
+      inset 0 3px 6px rgba(255, 255, 255, 0.8),
+      inset 0 -3px 8px rgba(70, 0, 30, 0.7),
+      0 8px 25px rgba(230, 0, 103, 0.5),
+      0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 3.5px solid #ffffff;
+  }
+
+  /* CD holographic rainbow sheen */
+  .cd-rainbow {
+    background: conic-gradient(
+      from 0deg,
+      #ffcce0 0deg,
+      #ffd699 45deg,
+      #ffff99 90deg,
+      #b3ffb3 135deg,
+      #99ffff 180deg,
+      #cc99ff 225deg,
+      #ff99cc 270deg,
+      #ffd699 315deg,
+      #ffcce0 360deg
+    );
+  }
+
+  /* Sparkle floating animation */
+  @keyframes sparkleFloat {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg) scale(1);
+      opacity: 0.85;
+    }
+    50% {
+      transform: translateY(-8px) rotate(180deg) scale(1.15);
+      opacity: 1;
+    }
+  }
+
+  @keyframes balloonDrift {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-12px) rotate(2deg);
+    }
+  }
+
+  @keyframes discoGlow {
+    0%, 100% {
+      filter: drop-shadow(0 0 15px rgba(255, 105, 180, 0.6)) brightness(1);
+    }
+    50% {
+      filter: drop-shadow(0 0 25px rgba(255, 20, 147, 0.9)) brightness(1.12);
+    }
+  }
+
+  .animate-sparkle {
+    animation: sparkleFloat 4s ease-in-out infinite;
+  }
+
+  .animate-balloon {
+    animation: balloonDrift 5s ease-in-out infinite;
+  }
+
+  .animate-discoglow {
+    animation: discoGlow 3s ease-in-out infinite;
+  }
+}

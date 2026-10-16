@@ -1,0 +1,8 @@
+{
+  "name": "Camila 23 - Confirmação de Presença",
+  "description": "Landing page oficial de confirmação de presença (RSVP) do aniversário de 23 anos da Camila no Smiley Home Resort com envio para e-mail.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
